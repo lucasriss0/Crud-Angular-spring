@@ -1,3 +1,4 @@
+import { CoursesService } from './../services/courses';
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../model/course';
 import { CommonModule } from '@angular/common';
@@ -14,10 +15,14 @@ import { MatToolbar } from "@angular/material/toolbar";
   styleUrls: ['./courses.scss'],
 })
 export class CoursesComponent {
-  courses: Course[] = [
-    {  _id: "1",name:'angular',category:'front-end'}
-
-
-  ];
+  courses: Course[] = [];
   displayedColumns = ['name','category'];
+
+  //coursesService: CoursesService;
+
+  constructor(private coursesService: CoursesService){
+
+    //this.coursesService = new CoursesService();
+    this.courses = this.coursesService.list();
+  }
 }

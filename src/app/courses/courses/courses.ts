@@ -1,9 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Course } from '../model/course';
+import { CommonModule } from '@angular/common';
+import { MatTableModule } from '@angular/material/table';
+
 
 @Component({
   selector: 'app-courses',
-  imports: [],
+  standalone: true,
+  imports: [MatTableModule, CommonModule],
   templateUrl: './courses.html',
-  styleUrl: './courses.scss',
+  styleUrls: ['./courses.scss'],
 })
-export class Courses {}
+export class CoursesComponent {
+  courses: Course[] = [];
+  displayedColumns = ['name','category'];
+}

@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatCard } from "@angular/material/card";
 import { MatToolbar } from "@angular/material/toolbar";
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { MatToolbar } from "@angular/material/toolbar";
   styleUrls: ['./courses.scss'],
 })
 export class CoursesComponent {
-  courses: Course[] = [];
+  courses: Observable<Course[]>;
   displayedColumns = ['name','category'];
 
   //coursesService: CoursesService;

@@ -5,8 +5,9 @@ import { CoursesRoutingModule } from './courses.routing.module';
 import {MatCardModule} from '@angular/material/card';
 import {  MatToolbarModule  } from '@angular/material/toolbar';
 
+
 @NgModule({
   declarations: [],
-  imports: [CommonModule, CoursesRoutingModule, MatTableModule,MatCardModule,MatToolbarModule],
+  imports: [CommonModule, CoursesRoutingModule, MatTableModule,MatCardModule,MatToolbarModule,],
 })
 export class CoursesModule {}

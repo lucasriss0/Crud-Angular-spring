@@ -6,12 +6,12 @@ import { MatTableModule } from '@angular/material/table';
 import { MatCard } from "@angular/material/card";
 import { MatToolbar } from "@angular/material/toolbar";
 import { Observable } from 'rxjs';
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [MatTableModule, CommonModule, MatCard, MatToolbar],
+  imports: [MatTableModule, CommonModule, MatCard, MatToolbar,MatProgressSpinnerModule],
   templateUrl: './courses.html',
   styleUrls: ['./courses.scss'],
 })

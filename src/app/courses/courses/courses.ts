@@ -9,11 +9,15 @@ import { catchError, Observable, of } from 'rxjs';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialog } from '@angular/material/dialog';
 import { ErrorDialog } from '../../shared/components/error-dialog/error-dialog';
+import {MatIconModule} from '@angular/material/icon';
+import { CategoryPipe } from '../../shared/pipes/category-pipe';
+
+
 
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [MatTableModule, CommonModule, MatCard, MatToolbar,MatProgressSpinnerModule],
+  imports: [MatTableModule, CommonModule, MatCard, MatToolbar,MatProgressSpinnerModule,MatIconModule,CategoryPipe],
   templateUrl: './courses.html',
   styleUrls: ['./courses.scss'],
 })
